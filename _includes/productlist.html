@@ -18,15 +18,15 @@
               <li>
                   <div class="productlisting">
                       <div class="productlistingphoto">
-                          <img src="{{ site.baseurl }}{{ image.path }}">
+                          <img src="{{ site.baseurl }}{{ image.path }}" alt="Product Image {{forloop.index}}">
                       </div>
                       <div class="productlistinginfo">
                           <p class="productlistingname">Amazing Item {{forloop.index}}</p>
                           <p class="productlistingcost">${{forloop.index}}000.00</p>
                       </div>
                       <div class="productlistingbuttons">
-                          <a href="cart"><input type="button" value="Buy Now"></a>
-                          <a href="cart"><input type="button" value="Add to Cart"></a>
+                          <a href="cart"><div class="productlistingbutton">Buy Now</div></a>
+                          <a href="cart"><div class="productlistingbutton">Add to Cart</div></a>
                       </div>
                       
                   </div>

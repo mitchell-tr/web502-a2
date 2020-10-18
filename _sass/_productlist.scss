@@ -93,9 +93,16 @@ option{
     flex-grow: 1;
     height:40px;
 }
-.productlistingbuttons input{
+.productlistingbuttons .productlistingbutton{
     width:100%;
     height:100%;
+    cursor: pointer;
+    border: none;
+    background-color: #222;
+    color:#ecedea;
+    font-family: FuturaBold,Arial,sans-serif;
+    font-size: 15pt;
+    border-radius: 0.5em;
     cursor: pointer;
 }
 .productlistingbuttons a:nth-child(2){
