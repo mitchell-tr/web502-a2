@@ -1,0 +1,105 @@
+@font-face {
+    font-family: FuturaBold;
+    src: url("/assets/fonts/Futura-Bold.woff");
+}
+
+*{
+    color:#173e43;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    margin:0;
+    background-color: #173e43;
+    box-shadow: 0 3000px rgba(23, 62, 67,0.7) inset;
+    padding: 2em; 
+}
+h1, h2, h3,h4{
+    text-align: center;
+    margin:0;
+    padding:5px;
+    font-family: FuturaBold,Arial,sans-serif;
+    
+}
+h1{
+    font-size: 34pt;
+}
+h2{
+    font-size: 28pt;
+}
+h3{
+    font-size: 22pt;
+}
+h4{
+    font-size: 16pt;
+}
+p{
+    padding:10px;
+    text-align: center;
+}
+.content {
+    text-align: center;
+    margin: 2em 0;
+    background-color: #fae596;
+    padding:10px;
+    border: 1px solid rgba(89, 89, 89,0.4);
+    box-shadow: 0px 0px 56px -16px rgba(0,0,0,1);
+    border-radius: 0.5em;
+
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+}
+
+.content > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.footer {
+    margin: 0.5em;
+    background-color: #dddfd4;
+    border: 1px solid rgba(89, 89, 89,0.4);
+    box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.53);
+    border-radius: 0.5em;
+}
+button {
+    width: 120px;
+    height: 100%;
+    border: none;
+    background-color: #222;
+    color:#ecedea;
+    font-family: FuturaBold,Arial,sans-serif;
+    font-size: 15pt;
+    border-radius: 0.5em;
+    cursor: pointer;
+    padding:5px;
+}
+
+
+.right-aside {
+    max-width:17em;
+    background-color: #dddfd4;
+    border: 1px solid rgba(89, 89, 89,0.4);
+    box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.53);
+    border-radius: 0.5em;
+}
+
+@media all and (min-width: 600px) {
+    .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+    .main    { flex: 3 0px; }
+    .left-aside { order: 1; } 
+    .main    { order: 2; }
+    .right-aside { order: 3; }
+    .footer  { order: 4; }
+}
+@media (max-width: 800px) {
+    body {
+      padding:0;
+    }
+    .content{
+        padding:0;
+    }
+  }

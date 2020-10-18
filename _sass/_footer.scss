@@ -1,0 +1,12 @@
+.footermain{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footermain > *{
+    max-width: 25em;
+}
+.footermain ul{
+    list-style: none;
+    padding:0;
+}

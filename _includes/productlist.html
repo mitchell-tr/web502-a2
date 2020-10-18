@@ -1,0 +1,38 @@
+<article class="main">
+    <div class="topbar">
+        <h3>OUR STOCK</h3>
+        <form>
+            <label>SORT: </label>
+            <select>
+              <option>Price: High to Low</option>
+              <option>Price: Low to High</option>
+              <option>Popularity</option>
+              <option>Relevancy</option>
+            </select>
+          </form>
+    </div>
+      <ul>
+          <!-- loop thru every image in img folder and create an element for each -->
+          {% for image in site.static_files %}
+              {% if image.path contains '/assets/img' %}
+              <li>
+                  <div class="productlisting">
+                      <div class="productlistingphoto">
+                          <img src="{{ site.baseurl }}{{ image.path }}">
+                      </div>
+                      <div class="productlistinginfo">
+                          <p class="productlistingname">Amazing Item {{forloop.index}}</p>
+                          <p class="productlistingcost">${{forloop.index}}000.00</p>
+                      </div>
+                      <div class="productlistingbuttons">
+                          <a href="cart"><input type="button" value="Buy Now"></a>
+                          <a href="cart"><input type="button" value="Add to Cart"></a>
+                      </div>
+                      
+                  </div>
+              </li>
+              {% endif %}
+          {% endfor %}
+        
+      </ul>
+  </article>
